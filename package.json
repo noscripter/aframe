@@ -22,7 +22,9 @@
     "test": "karma start ./tests/karma.conf.js",
     "test:docs": "node scripts/docsLint.js",
     "test:firefox": "karma start ./tests/karma.conf.js --browsers Firefox",
-    "test:chrome": "karma start ./tests/karma.conf.js --browsers Chrome"
+    "test:chrome": "karma start ./tests/karma.conf.js --browsers Chrome",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": "aframevr/aframe",
   "license": "MIT",
@@ -39,8 +41,9 @@
     "style-attr": "^1.0.2",
     "three": "^0.83.0",
     "three-bmfont-text": "^2.1.0",
-    "tween.js": "^15.0.0",
-    "webvr-polyfill": "dmarcos/webvr-polyfill#a02a8089b"
+    "tween.js": "^16.1.1",
+    "webvr-polyfill": "dmarcos/webvr-polyfill#a02a8089b",
+    "snyk": "^1.104.2"
   },
   "devDependencies": {
     "browserify": "^13.1.0",
@@ -120,5 +123,6 @@
   "engines": {
     "node": ">= 4.6.0",
     "npm": "^2.15.9"
-  }
+  },
+  "snyk": true
 }
